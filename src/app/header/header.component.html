@@ -1,7 +1,7 @@
 <div class="headerClass">
-  <app-nav>
-  </app-nav>
+  <app-nav [menuItem]="menuItems" (anotherChanged)="test = $event" (changed)="menuItem = $event;"></app-nav>
 </div>
 <div class="display">
-  <span class="chooser">123</span>
+  {{test}}
+  <span class="chooser">{{menuItem?.id}} - {{menuItem?.title}}</span>
 </div>
